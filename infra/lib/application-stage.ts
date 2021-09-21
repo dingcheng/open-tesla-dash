@@ -1,10 +1,10 @@
 import { CfnOutput, Construct, Stage, StageProps } from '@aws-cdk/core';
-import { DataStreamStack } from './datastream_stack';
+import { DataStreamStack } from './datastream-stack';
 
 /**
  * Deployable unit of web service app
  */
-export class ProdStage extends Stage {
+export class ApplicationStage extends Stage {
   public readonly urlOutput: CfnOutput;
   
   constructor(scope: Construct, id: string, props?: StageProps) {

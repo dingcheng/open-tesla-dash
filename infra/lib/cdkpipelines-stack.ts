@@ -1,5 +1,6 @@
 import { Construct, SecretValue, Stack, StackProps } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from "@aws-cdk/pipelines";
+import { ApplicationStage } from './application-stage';
 
 /**
  * The stack that defines the application pipeline
@@ -29,5 +30,11 @@ export class CdkPipelineStack extends Stack {
 
         // This is where we add the application stages
         // ...
+        pipeline.addStage(new ApplicationStage(this, 'Prod', {
+            env: {
+                account: '194962086589',
+                region: 'us-west-2'
+            }
+        }))
     }
 }
