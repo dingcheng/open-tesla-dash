@@ -20,8 +20,8 @@ export class CdkPipelineStack extends Stack {
 
                 // Install dependencies, build and run cdk synth
                 commands: [
+                    'npm install -g aws-cdk',
                     'cd infra',
-                    'cdk --version',
                     'npm ci',
                     'npm run build',
                     'npx cdk synth'
