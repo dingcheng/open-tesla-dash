@@ -10,7 +10,7 @@ export class ApplicationStage extends Stage {
   constructor(scope: Construct, id: string, props?: StageProps) {
     super(scope, id, props);
 
-    const service = new DataStreamStack(this, 'WebService');
+    const service = new DataStreamStack(this, 'DataStream');
     
     // Expose CdkpipelinesDemoStack's output one level higher
     this.urlOutput = service.urlOutput;
