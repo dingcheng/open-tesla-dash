@@ -27,7 +27,7 @@ export class CdkPipelineStack extends Stack {
                     'npx cdk synth'
                 ],
 
-                primaryOutputDirectory: 'infra/'
+                primaryOutputDirectory: 'infra/cdk.out'
             }),
         });
 
