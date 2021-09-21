@@ -10,7 +10,7 @@ export class CdkPipelineStack extends Stack {
 
         const pipeline = new CodePipeline(this, 'Pipeline', {
             // The pipeline name
-            pipelineName: 'MyServicePipeline',
+            pipelineName: 'OpenTeslaDashPipeline',
 
             // How it will be built and synthesized
             synth: new ShellStep('Synth', {
