@@ -24,7 +24,7 @@ export class CdkPipelineStack extends Stack {
                     'cd infra',
                     'npm ci',
                     'npm run build',
-                    'npx cdk synth'
+                    'cdk synth'
                 ],
 
                 primaryOutputDirectory: 'infra/cdk.out'
