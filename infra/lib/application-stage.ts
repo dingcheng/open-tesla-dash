@@ -1,4 +1,4 @@
-import { CfnOutput, Construct, Stage, StageProps } from '@aws-cdk/core';
+import { CfnOutput, Construct, Stage, StageProps } from 'monocdk';
 import { DataStreamStack } from './datastream-stack';
 
 /**

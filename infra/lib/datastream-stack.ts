@@ -1,6 +1,6 @@
-import * as apigw from '@aws-cdk/aws-apigateway';
-import * as lambda from '@aws-cdk/aws-lambda';
-import { CfnOutput, Construct, Stack, StackProps } from '@aws-cdk/core';
+import * as apigw from 'monocdk/aws-apigateway';
+import * as lambda from 'monocdk/aws-lambda';
+import { CfnOutput, Construct, Stack, StackProps } from 'monocdk';
 import * as path from 'path';
 
 export class DataStreamStack extends Stack {

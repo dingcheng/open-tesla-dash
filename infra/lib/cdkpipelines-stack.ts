@@ -1,5 +1,5 @@
-import { Construct, SecretValue, Stack, StackProps } from '@aws-cdk/core';
-import { CodePipeline, CodePipelineSource, ShellStep } from "@aws-cdk/pipelines";
+import { Construct, SecretValue, Stack, StackProps } from 'monocdk';
+import { CodePipeline, CodePipelineSource, ShellStep } from "monocdk/pipelines";
 import { ApplicationStage } from './application-stage';
 
 /**
