@@ -1,7 +1,9 @@
 import * as apigw from 'monocdk/aws-apigateway';
 import * as lambda from 'monocdk/aws-lambda';
+import * as iam from 'monocdk/aws-iam';
 import { CfnOutput, Construct, Stack, StackProps } from 'monocdk';
 import * as path from 'path';
+import { OpenTeslaDashDynamoDBTables } from './dynamo-tables';
 
 export class DataStreamStack extends Stack {
   /**
@@ -19,15 +21,18 @@ export class DataStreamStack extends Stack {
       code: lambda.Code.fromAsset(path.resolve(__dirname, '../../lambda')),
     });
 
-     // An API Gateway to make the Lambda web-accessible
-     const gw = new apigw.LambdaRestApi(this, 'Gateway', {
+    // An API Gateway to make the Lambda web-accessible
+    const gw = new apigw.LambdaRestApi(this, 'Gateway', {
       description: 'Endpoint for a simple Lambda-powered web service',
       handler,
     });
 
+    const tables = new OpenTeslaDashDynamoDBTables(this, 'Tables', {});
+    tables.teslaTokensTable.grantReadWriteData(handler);
+
     this.urlOutput = new CfnOutput(this, 'Url', {
       value: gw.url,
     });
-    
+
   }
 }
