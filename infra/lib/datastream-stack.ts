@@ -1,6 +1,5 @@
 import * as apigw from 'monocdk/aws-apigateway';
 import * as lambda from 'monocdk/aws-lambda';
-import * as iam from 'monocdk/aws-iam';
 import { CfnOutput, Construct, Stack, StackProps } from 'monocdk';
 import * as path from 'path';
 import { OpenTeslaDashDynamoDBTables } from './dynamo-tables';

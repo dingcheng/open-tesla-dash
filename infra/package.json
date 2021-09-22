@@ -11,7 +11,7 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.123.0",
+    "@monocdk-experiment/assert": "^1.124.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "^1.20.0",
@@ -21,7 +21,6 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@monocdk-experiment/assert": "^1.124.0",
     "monocdk": "^1.124.0",
     "source-map-support": "^0.5.16"
   }
